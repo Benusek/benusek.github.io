@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Recipes</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header style="min-width:315px;">
+    <nav class="navbar navbar-expand-lg bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#">Recipes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="../index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="modes.html">Режимы питания</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Продукты
+                        </a>
+                        <ul id="products" class="dropdown-menu">
+                            <li><a class="dropdown-item text-black" id="milks" href="products.html">Кисломолочные</a></li>
+                            <li><a class="dropdown-item text-black" id="fruits" href="products.html">Фрукты, ягоды</a></li>
+                            <li><a class="dropdown-item text-black" id="vegetables" href="products.html">Овощи</a></li>
+                            <li><a class="dropdown-item text-black" id="meats" href="products.html">Мясные</a></li>
+                            <li><a class="dropdown-item text-black" id="grains" href="products.html">Зерновые, бобы</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" id="recipes" href="recipes.html">Рецепты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" id="fitness" href="fitness.html">Фитнес</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main id="main">
+    <div class="container bg-success-subtle border-2 border-success border-start border-end" style="min-height: 1000px;">
+        <div class="border row-cols-1 row row-cols-lg-2 p-3 flex-d justify-content-center">
+            <div id="filter" class="accordion col col-xs-auto col-lg-3 col-xll-3 p-0 pe-1">
+                <div class="accordion-item min-w-200px mb-2 border border-2 rounded-2 border-success">
+                    <h2 class="accordion-header d-lg-none">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Фильтр
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show d-lg-block"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body d-lg-block">
+                            <div id="recipeName" class="row p-2">
+                                <button id="findRecipes" class="btn btn-success mb-3">Найти</button>
+                                <button id="resetRecipes" class="btn btn-outline-secondary">Сбросить</button>
+                                <span class="fw-bold text-body-secondary d-flex justify-content-center m-3">Выберите прием пищи</span>
+                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-1"> 
+                                    <div class="col d-flex justify-content-center align-items-center">
+                                        <span class="pt-2 label">Любой</span>
+                                        <input type="radio" id="everyone" class="form-check-input" name="recipe" checked>
+                                    </div>
+                                    <div class="col d-flex justify-content-center align-items-center">
+                                        <span class="pt-2 label">Завтрак</span>
+                                        <input type="radio" id="breakfast" class="form-check-input" name="recipe">
+                                    </div>
+                                    <div class="col d-flex justify-content-center align-items-center">
+                                        <span class="pt-2 label">Обед</span>
+                                        <input type="radio" id="lunch" class="form-check-input" name="recipe">
+                                    </div>
+                                    <div class="col d-flex justify-content-center align-items-center">
+                                        <span class="pt-2 label">Ужин</span>
+                                        <input type="radio" id="dinner" class="form-check-input" name="recipe">
+                                    </div>
+                                    <div class="col d-flex justify-content-center align-items-center">
+                                        <span class="pt-2 label">Перекус</span>
+                                        <input type="radio" id="snack" class="form-check-input" name="recipe">
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="fw-bold text-body-secondary d-flex justify-content-center m-3">Выберите продукты</span>
+                              <input id="inputProducts" class="form-control me-auto" type="search" placeholder="Найти продукт" aria-label="Найти продукт">
+                              <div class="text-center" id="NotFoundMessage"></div>
+                            <div id="productName" class="p-2 row row-cols-sm-2 row-cols-md-3 row-cols-lg-1 p-3 justify-content-center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="recipesSection" class="col m-0" style="flex-grow:1;">
+                <div id="grid" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3"></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer style="min-width:315px;">
+    <div class="w-100 border-top border-success bg-success align-self-stretch">
+        <footer class="py-3 mt-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="../index.html" class="nav-link px-2 text-light">Главная</a></li>
+                <li class="nav-item"><a href="modes.html" class="nav-link px-2 text-light">Режимы питания</a></li>
+                <li class="nav-item"><a href="products.html" class="nav-link px-2 text-light">Продукты</a></li>
+                <li class="nav-item"><a href="recipes.html" class="nav-link px-2 text-light">Рецепты</a></li>
+                <li class="nav-item"><a href="fitness.html" class="nav-link px-2 text-light">Фитнес</a></li>
+            </ul>
+            <p class="text-center text-light">Сайт сделан Ремизовым Егором, все права защищены</p>
+        </footer>
+    </div>
+</footer>
+
+<script src="../main.js"></script>
+<script src="recipes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
