@@ -1,0 +1,57 @@
+
+#grid-container {
+    margin: 0 auto;
+    width: fit-content;
+    background-color: #a5a5a5;
+    min-width: 200px;
+}
+
+.bg-nav {
+    background-color: #432727;
+}
+
+
+.label {
+    width:120px;
+    display:inline-block;
+}
+
+.min-w-200px {
+    min-width: 200px;
+}
+
+.item {
+    cursor:pointer;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item:hover .card-title {
+    color: darkseagreen;
+}
+
+.fs-custom {
+    font-size: calc(1rem + .9vw);
+}
+
+.w-95px {
+    width: 95px;
+}
+
+.form-check-input:checked {
+    background-color: seagreen !important;
+    border-color: seagreen !important;
+    opacity: 1 !important;
+}
+
+.form-check-input {
+    border: 1px solid black !important;
+    opacity: 0.2 !important;
+}
+
+.nav-item.dropdown .dropdown-item:active {
+    background-color: seagreen !important;
+    color: white !important;
+}
