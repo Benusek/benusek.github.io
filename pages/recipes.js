@@ -266,7 +266,7 @@ function addEventForRecipes(data) {
                                         <span class="text-white display-6">Каллорийность: ${data['Recipes'][id - 1]['calories']} Ккал</span>
                                     </div>
                                     <div class="col-sm-6 d-flex flex-column justify-content-center text-center text-sm-end w-25">
-                                       <span class="text-white fs-4">Б ${data['Recipes'][id - 1]['proteins']}</span>
+                                        <span class="text-white fs-4">Б ${data['Recipes'][id - 1]['proteins']}</span>
                                         <span class="text-white fs-4">Ж ${data['Recipes'][id - 1]['fats']}</span>
                                         <span class="text-white fs-4">У ${data['Recipes'][id - 1]['carb']}</span>
                                     </div>
