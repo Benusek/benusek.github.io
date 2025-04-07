@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Recipes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#">Recipes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="pages/modes.html">Режимы питания</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="pages/products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Продукты
+                        </a>
+                        <ul id="products" class="dropdown-menu">
+                            <li><a class="dropdown-item text-black" id="milks" href="pages/products.html">Кисломолочные</a></li>
+                            <li><a class="dropdown-item text-black" id="fruits" href="pages/products.html">Фрукты, ягоды</a></li>
+                            <li><a class="dropdown-item text-black" id="vegetables" href="pages/products.html">Овощи</a></li>
+                            <li><a class="dropdown-item text-black" id="meats" href="pages/products.html">Мясные</a></li>
+                            <li><a class="dropdown-item text-black" id="grains" href="pages/products.html">Зерновые, бобы</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" id="recipes" href="pages/recipes.html">Рецепты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" id="fitness" href="pages/fitness.html">Фитнес</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main id="main">
+    <div class="container bg-success-subtle p-4 border-start border-end border-2 border-success">
+        <div class="row row-cols-1 row-cols-sm-2">
+            <div class="col fs-3 d-flex flex-column justify-content-center align-items-center">
+                <div class="p-3">
+                    <span class="display-6 fw-bold">Добро пожаловать в Recipes!</span><br>
+                    <span class="fs-4">Сайт создан для тех,
+                    кто любит готовить с удовольствием и хочет максимально упростить
+                    процесс поиска рецептов.</span>
+                </div>
+            </div>
+            <div class="col">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded-4 border-success border border-3">
+                        <div class="carousel-item active">
+                            <img src="images/Products/moloko-modal.jpg" class="d-block w-100 object-fit-cover" style="height: 400px;" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/Recipes/borsh.jpg" class="d-block w-100 object-fit-cover" style="height: 400px;" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/Recipes/kompotik.jpg" class="d-block w-100 object-fit-cover" style="height: 400px;" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 mt-4 pt-4 border-top border-black border-opacity-25">
+            <span class="h2 w-100 ms-3">Продукты</span>
+            <div class="col fs-3 d-flex flex-column justify-content-center align-items-center" id="productSection">
+
+            </div>
+            <div class="col d-flex flex-column justify-content-center align-items-center">
+                <div class="p-3">
+                    <span class="fs-5">Узнайте больше о каждом ингредиенте: калорийность,
+                        полезные свойства, советы по выбору и хранению.
+                        Сайт поможем вам готовить не только вкусно, но и с
+                        пользой для здоровья.</span>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mt-4 pt-4 border-top border-black border-opacity-25"  id="articleSection">
+            <span class="h2 w-100 ms-3">Фитнес</span>
+
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 mt-4 pt-4 border-top border-black border-opacity-25">
+            <span class="h2 w-100 ms-3">Рецепты</span>
+            <div class="col d-flex flex-column justify-content-center align-items-center">
+                <div class="p-3">
+                    <span class="fs-5">Настройте поиск по ингредиентам, которые есть у вас под рукой,
+                        и сайт предложит вам подходящие рецепты.
+                        Больше не нужно ломать голову над тем, что приготовить —
+                        просто введите продукты, и сайт найдёт подходящие рецепты!</span>
+                </div>
+            </div>
+            <div class="col fs-3 d-flex flex-column justify-content-center align-items-center" id="recipeSection">
+
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 mt-4 pt-4 border-top border-black border-opacity-25">
+            <span class="h2 w-100 mb-4 ms-3">Режимы питания</span>
+            <div class="col fs-3 d-flex flex-column justify-content-center align-items-center" id="modeSection">
+
+            </div>
+            <div class="col d-flex flex-column justify-content-center align-items-center">
+                <div class="p-3">
+                    <span class="fs-5">В разделе "Режимы питания" собрана информация о
+                        различных режимах питания, которые помогут вам подобрать
+                        оптимальный рацион в зависимости от целей, состояния здоровья
+                        и образа жизни.</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="w-100 border-top border-success bg-success align-self-stretch">
+        <footer class="py-3 mt-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-light">Главная</a></li>
+                <li class="nav-item"><a href="pages/modes.html" class="nav-link px-2 text-light">Режимы питания</a></li>
+                <li class="nav-item"><a href="pages/products.html" class="nav-link px-2 text-light">Продукты</a></li>
+                <li class="nav-item"><a href="pages/recipes.html" class="nav-link px-2 text-light">Рецепты</a></li>
+                <li class="nav-item"><a href="pages/fitness.html" class="nav-link px-2 text-light">Фитнес</a></li>
+            </ul>
+            <p class="text-center text-light">Сайт сделан Ремизовым Егором, все права защищены</p>
+        </footer>
+    </div>
+</footer>
+
+<script src="index.js"></script>
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
