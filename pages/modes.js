@@ -12,7 +12,7 @@ request.then(response => {
 
         for (let i = 0; i < data['DietPlans'].length; i++) {
             grid.innerHTML += `<div class="card item mb-3 p-0 border border-3 border-success rounded-3" id="${i}">
-  <img src="../${data['DietPlans'][i]['image']}" class="card-img-top object-fit-cover border-bottom border-3 border-success min-w-200px" style="height:230px;">
+  <img src="../${data['DietPlans'][i]['image']}" class="card-img-top object-fit-cover border-bottom border-3 border-success" style="height:230px;">
   <div class="card-body">
     <h5 class="card-title">${data['DietPlans'][i]['name']}</h5>
     <p class="card-text"><small class="text-muted">${data['DietPlans'][i]['category']}</small></p>
